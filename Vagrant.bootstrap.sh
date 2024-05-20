@@ -52,6 +52,6 @@ if [ ! -d "$APP_PATH" ]; then
 	cd $APACHE_ROOT
 	sudo git clone https://github.com/jhenzenn/utn-devops.git
 	cd $APP_PATH
-	sudo git checkout utn-devops-app
+	sudo git checkout unidad-1 
 fi
 
