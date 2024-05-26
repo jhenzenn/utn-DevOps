@@ -7,8 +7,6 @@ services:
     volumes:
       - "./configs/php/php.ini:/usr/local/etc/php/php.ini"
       - "./configs/httpd/devops.site.conf:/etc/apache2/sites-available/000-default.conf"
-      - "./configs/app/.env:/var/www/html/myapp/.env"
-      - "./configs/app/config_app.sh:/tmp/config_app.sh"
       - "/var/www/YOURLS:/var/www/html"
     ports:
       - "8081:80"
@@ -29,12 +27,13 @@ services:
     ports:
       - "4400:3306"
     volumes:
-      - "/var/lib/mysql:/var/lib/mysql"
+      - yourls_db_data:/var/lib/mysql
+      #- "/var/lib/mysql:/var/lib/mysql"
       #- "./configs/mysql/script.sql:/tmp/script.sql"
     networks:
       - app-network
 volumes:
-  db_data:
+  yourls_db_data:
     driver: local
 networks:
   app-network:

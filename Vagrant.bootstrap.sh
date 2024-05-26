@@ -89,3 +89,6 @@ if [ ! -x "$(command -v docker)" ]; then
 	sudo systemctl enable docker
 	sudo usermod -aG docker vagrant
 fi
+######### Activacion de contenedores docker solo si no fueron creados anteriormente ###########
+cd /vagrant/docker
+docker-compose up -d --no-recreate
