@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
 
   #Configuro la cantidad de memoria ram de la VM para el proveedor VirtualBox
   config.vm.provider "virtualbox" do |v|
-	  v.name = "utn-devops-vagrant-ubuntu"
+          v.name = "utn-devops-vagrant-ubuntu-jhenzenn"
     v.memory = "1024"
   end
 
